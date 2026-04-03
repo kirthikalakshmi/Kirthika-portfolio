@@ -21,39 +21,46 @@
             100% {background-position: 0% 50%;}
         }
 
-        header {
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        /* BANNER HEADER */
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
         }
 
-        .logo img {
-            height: 50px;
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        nav a {
-            color: #e2e8f0;
+        .overlay-nav {
+            position: absolute;
+            top: 20px;
+            right: 50px;
+        }
+
+        .overlay-nav a {
+            color: white;
             margin-left: 20px;
             text-decoration: none;
+            font-weight: bold;
             transition: 0.3s;
         }
 
-        nav a:hover {
+        .overlay-nav a:hover {
             color: #22c55e;
             transform: scale(1.1);
         }
 
+        /* HERO */
         .hero {
-            padding: 80px 50px;
+            padding: 60px 50px;
         }
 
-        .hero h2 {
-            font-size: 42px;
-        }
-
-        /* Typing Animation */
         .typing {
+            font-size: 40px;
             border-right: 2px solid #22c55e;
             white-space: nowrap;
             overflow: hidden;
@@ -98,6 +105,7 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
 
+        /* SKILLS */
         .skills {
             display: flex;
             gap: 20px;
@@ -119,6 +127,11 @@
             color: black;
         }
 
+        .skill-box i {
+            font-size: 28px;
+        }
+
+        /* PROJECTS */
         .projects {
             display: flex;
             gap: 20px;
@@ -164,6 +177,12 @@
             box-shadow: 0 0 10px #22c55e;
         }
 
+        /* CONTACT ICONS */
+        p i {
+            margin-right: 8px;
+            color: #22c55e;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -173,12 +192,11 @@
 
 <body>
 
-<header>
-    <div class="logo">
-        <img src="https://via.placeholder.com/100x50?text=KL" alt="KL Logo">
-    </div>
+<!-- BANNER -->
+<header class="banner">
+    <img src="kirthikalakshmi.png" alt="Banner">
 
-    <nav>
+    <nav class="overlay-nav">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
@@ -186,18 +204,21 @@
     </nav>
 </header>
 
+<!-- HERO -->
 <div class="hero">
     <h2 class="typing">Hi, I'm Kirthika Lakshmi 👋</h2>
     <p>Aspirant Data Analyst</p>
 </div>
 
+<!-- ABOUT -->
 <section id="about">
     <h3>About Me</h3>
     <div class="card">
-        <p>Data Analyst | BE., MBA | Data Research & Business Insights • Excel • Power BI</p>
+        <p>Data Analyst | BE., MBA | Data Research & Business Insights • Excel • Power BI | Investment & Market Analysis.</p>
     </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
     <h3>Skills</h3>
     <div class="card">
@@ -211,6 +232,7 @@
     </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
     <h3>Projects</h3>
     <div class="projects">
@@ -236,29 +258,27 @@
     </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
     <h3>Contact</h3>
     <div class="card">
         <p>Email: kirthikaviru@gmail.com</p>
         <p>Mobile: 9345510589</p>
-        <p>
-           <i class="fa-brands fa-github"></i>
-    <a href="https://github.com/kirthikalakshmi" target="_blank">
-        GitHub
-    </a>
-</p>
 
-<p>
-    <i class="fa-brands fa-linkedin"></i>
-    <a href="https://www.linkedin.com/in/kirthika-lakshmi-rajavelu27/" target="_blank">
-        LinkedIn
-    </a>
-</p>
+        <p>
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/kirthikalakshmi" target="_blank">GitHub</a>
+        </p>
+
+        <p>
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/kirthika-lakshmi-rajavelu27/" target="_blank">LinkedIn</a>
+        </p>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Kirthika</p>
+    <p>© 2026 Kirthika Lakshmi</p>
 </footer>
 
 <script>
