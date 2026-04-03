@@ -3,6 +3,9 @@
 <head>
     <title>Kirthika Portfolio</title>
 
+    <!-- Icons Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
         body {
             margin: 0;
@@ -19,9 +22,12 @@
             align-items: center;
         }
 
-        header h1 {
+        /* KL Logo */
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
             color: #22c55e;
-            margin: 0;
+            letter-spacing: 2px;
         }
 
         nav a {
@@ -40,7 +46,7 @@
         }
 
         .hero h2 {
-            font-size: 40px;
+            font-size: 42px;
             margin: 0;
         }
 
@@ -61,16 +67,37 @@
             background: #1e293b;
             padding: 20px;
             margin-top: 15px;
+            border-radius: 12px;
+        }
+
+        /* Skills Icons */
+        .skills {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .skill-box {
+            background: #020617;
+            padding: 15px;
             border-radius: 10px;
+            text-align: center;
+            width: 100px;
+        }
+
+        .skill-box i {
+            font-size: 28px;
+            color: #22c55e;
+        }
+
+        .skill-box p {
+            margin: 8px 0 0;
+            font-size: 14px;
         }
 
         a {
             color: #22c55e;
             text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
         }
 
         footer {
@@ -84,7 +111,8 @@
 <body>
 
 <header>
-    <h1>Kirthika</h1>
+    <div class="logo">KL</div>
+
     <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -108,23 +136,45 @@
 <section id="skills">
     <h3>Skills</h3>
     <div class="card">
-        <ul>
-            <li>Advanced Excel</li>
-            <li>Python</li>
-            <li>SQL</li>
-            <li>Tableau</li>
-            <li>Power BI</li>
-        </ul>
+        <div class="skills">
+
+            <div class="skill-box">
+                <i class="fa-solid fa-file-excel"></i>
+                <p>Excel</p>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-brands fa-python"></i>
+                <p>Python</p>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-solid fa-database"></i>
+                <p>SQL</p>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-solid fa-chart-bar"></i>
+                <p>Tableau</p>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-solid fa-chart-line"></i>
+                <p>Power BI</p>
+            </div>
+
+        </div>
     </div>
 </section>
 
 <section id="projects">
     <h3>Projects</h3>
     <div class="card">
-        <ul>
-            <li>Sales Dashboard Project</li>
-            <li>Customer Analysis</li>
-        </ul>
+        <p><b>Sales Dashboard Project</b></p>
+        <p>Created interactive dashboard using Power BI for sales insights.</p>
+
+        <p><b>Customer Analysis</b></p>
+        <p>Analyzed customer behavior using Excel and SQL.</p>
     </div>
 </section>
 
@@ -133,12 +183,14 @@
     <div class="card">
         <p>Email: kirthikaviru@gmail.com</p>
         <p>Mobile: 9345510589</p>
+
         <p>
             GitHub: 
             <a href="https://github.com/kirthikalakshmi" target="_blank">
                 View My GitHub Profile
             </a>
         </p>
+
         <p>
             LinkedIn: 
             <a href="https://www.linkedin.com/in/kirthika-lakshmi-rajavelu27/" target="_blank">
