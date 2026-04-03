@@ -2,35 +2,155 @@
 <html>
 <head>
     <title>Kirthika Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+
+        header {
+            background: #020617;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #22c55e;
+            margin: 0;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #22c55e;
+        }
+
+        .hero {
+            padding: 80px 50px;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin: 0;
+        }
+
+        .hero p {
+            color: #22c55e;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 40px 50px;
+        }
+
+        h3 {
+            color: #22c55e;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        a {
+            color: #22c55e;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>Hi, I'm Kirthika Lakshmi 👋</h1>
-<p>Aspirant Data Analyst</p>
+<header>
+    <h1>Kirthika</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-<h2>About Me</h2>
-<p>Data Analyst | BE.,MBA | Data Research & Business Insights • Excel • Power BI | Investment & Market Analysis.</p>
+<div class="hero">
+    <h2>Hi, I'm Kirthika Lakshmi 👋</h2>
+    <p>Aspirant Data Analyst</p>
+</div>
 
-<h2>Skills</h2>
-<ul>
-    <li>Advanced Excel</li>
-    <li>Python</li>
-    <li>SQL</li>
-    <li>Tableau</li>
-    <li>Power BI</li>
-</ul>
+<section id="about">
+    <h3>About Me</h3>
+    <div class="card">
+        <p>Data Analyst | BE., MBA | Data Research & Business Insights • Excel • Power BI | Investment & Market Analysis.</p>
+    </div>
+</section>
 
-<h2>Projects</h2>
-<ul>
-    <li>Sales Dashboard Project</li>
-    <li>Customer Analysis</li>
-</ul>
+<section id="skills">
+    <h3>Skills</h3>
+    <div class="card">
+        <ul>
+            <li>Advanced Excel</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Tableau</li>
+            <li>Power BI</li>
+        </ul>
+    </div>
+</section>
 
-<h2>Contact</h2>
-<p>Email: kirthikaviru@gmail.com</p>
-<p>Mobile: 9345510589</p>
-<p>GitHub: <a href="http://github.com/kirthikalakshmi/"target="_blank"> View My Github Profile</a></p>    
-<p>LinkedIn: <a href="http://www.linkedin.com/in/kirthika-lakshmi-rajavelu27/" target="_blank">View My LinkedIn Profile</a></p>    
+<section id="projects">
+    <h3>Projects</h3>
+    <div class="card">
+        <ul>
+            <li>Sales Dashboard Project</li>
+            <li>Customer Analysis</li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact">
+    <h3>Contact</h3>
+    <div class="card">
+        <p>Email: kirthikaviru@gmail.com</p>
+        <p>Mobile: 9345510589</p>
+        <p>
+            GitHub: 
+            <a href="https://github.com/kirthikalakshmi" target="_blank">
+                View My GitHub Profile
+            </a>
+        </p>
+        <p>
+            LinkedIn: 
+            <a href="https://www.linkedin.com/in/kirthika-lakshmi-rajavelu27/" target="_blank">
+                View My LinkedIn Profile
+            </a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Kirthika Lakshmi</p>
+</footer>
 
 </body>
 </html>
