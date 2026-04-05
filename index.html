@@ -21,7 +21,7 @@
             100% {background-position: 0% 50%;}
         }
 
-        /* BANNER HEADER */
+        /* BANNER */
         .banner {
             position: relative;
             width: 100%;
@@ -56,7 +56,7 @@
 
         /* HERO */
         .hero {
-            padding: 60px 50px;
+            padding: 60px 50px 30px;
         }
 
         .typing {
@@ -65,7 +65,7 @@
             white-space: nowrap;
             overflow: hidden;
             width: 0;
-            animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+            animation: typing 3s steps(30, end) forwards;
         }
 
         @keyframes typing {
@@ -73,8 +73,27 @@
             to { width: 100% }
         }
 
-        @keyframes blink {
-            50% { border-color: transparent }
+        /* RESUME CENTER BUTTON */
+        .resume-center {
+            text-align: center;
+            margin: 20px 0 10px 0;
+        }
+
+        .resume-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #22c55e;
+            color: black;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .resume-btn:hover {
+            background: #16a34a;
+            box-shadow: 0 0 10px #22c55e;
+            transform: scale(1.05);
         }
 
         section {
@@ -177,7 +196,7 @@
             box-shadow: 0 0 10px #22c55e;
         }
 
-        /* CONTACT ICONS */
+        /* CONTACT */
         p i {
             margin-right: 8px;
             color: #22c55e;
@@ -192,9 +211,8 @@
 
 <body>
 
-<!-- BANNER -->
 <header class="banner">
-    <img src="Kirthika Lakshmi.png" alt="Banner">
+    <img src="Kirthika Lakshmi.png">
 
     <nav class="overlay-nav">
         <a href="#about">About</a>
@@ -204,21 +222,25 @@
     </nav>
 </header>
 
-<!-- HERO -->
 <div class="hero">
     <h2 class="typing">Hi, I'm Kirthika Lakshmi 👋</h2>
     <p>Data Analyst | BE., MBA | Data Research & Business Insights • Excel • Power BI | Investment & Market Analysis.</p>
 </div>
 
-<!-- ABOUT -->
+<!-- ✅ RESUME BUTTON IN GAP -->
+<div class="resume-center">
+    <a href="R_Kirthika_Lakshmi_Resume.pdf" target="_blank" class="resume-btn">
+        <i class="fa-solid fa-download"></i> Download Resume
+    </a>
+</div>
+
 <section id="about">
     <h3>About Me</h3>
     <div class="card">
-        <p>Detail-oriented Data Analyst with an MBA and B.E. background, specializing in Excel, Power BI, SQL, and EDA for data cleaning, dashboard development, KPI tracking, and performance analysis. Experienced in synthesizing insights from large, diverse datasets across sales, operational, and financial domains. Skilled in applying structured taxonomies, predefined rubrics, and classification frameworks to generate accurate, structured outputs — skills directly aligned with AI data annotation and generalist expert workflows. Proven ability to identify inconsistencies, ambiguities, and errors in raw datasets. Self-disciplined remote professional available immediately.</p>
+        <p>Detail-oriented Data Analyst with an MBA and B.E. background, specializing in Excel, Power BI, SQL, and EDA for data cleaning, dashboard development, KPI tracking, and performance analysis...</p>
     </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
     <h3>Skills</h3>
     <div class="card">
@@ -232,48 +254,30 @@
     </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
     <h3>Projects</h3>
     <div class="projects">
-
         <div class="project-card">
-            <img src="https://via.placeholder.com/300x160" alt="Project">
+            <img src="https://via.placeholder.com/300x160">
             <div class="project-content">
                 <h4>Sales Dashboard</h4>
-                <p>Power BI dashboard for business insights</p>
                 <a href="#" class="btn">View Project</a>
             </div>
         </div>
-
-        <div class="project-card">
-            <img src="https://via.placeholder.com/300x160" alt="Project">
-            <div class="project-content">
-                <h4>Customer Analysis</h4>
-                <p>Customer segmentation using SQL & Excel</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-        </div>
-
     </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
     <h3>Contact</h3>
     <div class="card">
         <p>Email: kirthikaviru@gmail.com</p>
         <p>Mobile: 9345510589</p>
 
-        <p>
-            <i class="fa-brands fa-github"></i>
-            <a href="https://github.com/kirthikalakshmi" target="_blank">GitHub</a>
-        </p>
+        <p><i class="fa-brands fa-github"></i>
+        <a href="https://github.com/kirthikalakshmi" target="_blank">GitHub</a></p>
 
-        <p>
-            <i class="fa-brands fa-linkedin"></i>
-            <a href="https://www.linkedin.com/in/kirthika-lakshmi-rajavelu27/" target="_blank">LinkedIn</a>
-        </p>
+        <p><i class="fa-brands fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/kirthika-lakshmi-rajavelu27/" target="_blank">LinkedIn</a></p>
     </div>
 </section>
 
@@ -286,8 +290,7 @@
 
     window.addEventListener("scroll", () => {
         sections.forEach(sec => {
-            const top = sec.getBoundingClientRect().top;
-            if(top < window.innerHeight - 100) {
+            if(sec.getBoundingClientRect().top < window.innerHeight - 100) {
                 sec.classList.add("show");
             }
         });
