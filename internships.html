@@ -1,73 +1,173 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Internships</title>
-  <style>
-    body { font-family: Arial; padding: 20px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .tabs button {
-      padding: 10px;
-      margin: 5px;
-      cursor: pointer;
-    }
+<title>Internships</title>
 
-    .content {
-      display: none;
-      margin-top: 20px;
-    }
+<!-- FONT (same modern style) -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    .active {
-      display: block;
-    }
-  </style>
+<style>
+
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+/* ===== NAVBAR ===== */
+.overlay-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.overlay-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.overlay-nav a:hover {
+    color: #00ffcc;
+}
+
+/* ===== SECTION ===== */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+/* ===== TABS ===== */
+.tabs {
+    margin-bottom: 30px;
+}
+
+.tabs button {
+    padding: 12px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    transition: 0.3s;
+}
+
+.tabs button:hover {
+    background: rgba(0,255,204,0.3);
+}
+
+.tabs button.active {
+    background: #00ffcc;
+    color: black;
+}
+
+/* ===== CARD ===== */
+.content {
+    display: none;
+    max-width: 700px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.content.active {
+    display: block;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- SAME NAV STYLE -->
+<nav class="overlay-nav">
+    <a href="index.html#about">About</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#contact">Contact</a>
+</nav>
+
+<section>
+
 <h1>My Internships</h1>
 
 <div class="tabs">
-  <button onclick="show('growai')">GROWAI EdTech</button>
-  <button onclick="show('novitech')">NovitechR&D Ltd</button>
-  <button onclick="show('labmentix')">Labmentix</button>
-  <button onclick="show('istudio')">iStudio</button>
+    <button class="active" onclick="showTab(event,'growai')">GROWAI EdTech</button>
+    <button onclick="showTab(event,'novitech')">Novitech R&D</button>
+    <button onclick="showTab(event,'labmentix')">Labmentix</button>
+    <button onclick="showTab(event,'istudio')">iStudio</button>
 </div>
 
+<!-- GROWAI -->
 <div id="growai" class="content active">
-  <h2>GROWAI EdTech</h2>
-  <p>Role: Data Analyst Intern</p>
-  <p>Duration: From MARCH,2026 Ongoing</p>
-  <p>Status: Yet to Complete</p>
+    <h2>GROWAI EdTech</h2>
+    <p><b>Role:</b> Data Analyst Intern</p>
+    <p><b>Duration:</b> March 2026 – Ongoing</p>
+    <p><b>Status:</b> Yet to Complete</p>
+    <p><b>Work:</b> Dashboard development and data analysis projects (updating soon)</p>
 </div>
 
+<!-- NOVITECH -->
 <div id="novitech" class="content">
-  <h2>NovitechR&D</h2>
-  <p>Role: Data Analyst Career Accelerator Program and AI & ML for Data Analyst Intern</p>
-  <p>Duration: From APRIL,2026 Ongoing</p>
-  <p>Status: Yet to Complete</p>
+    <h2>Novitech R&D Ltd</h2>
+    <p><b>Role:</b> Data Analyst Career Accelerator + AI/ML Intern</p>
+    <p><b>Duration:</b> April 2026 – Ongoing</p>
+    <p><b>Status:</b> Yet to Complete</p>
 </div>
 
+<!-- LABMENTIX -->
 <div id="labmentix" class="content">
-  <h2>Labmentix</h2>
-  <p>Role: Data Analytics with Ai / Business Analyst</p>
-  <p>Duration: From MARCH,2026 Ongoing</p>
-  <p>Status: Yet to Complete</p>
+    <h2>Labmentix</h2>
+    <p><b>Role:</b> Data Analytics with AI / Business Analyst</p>
+    <p><b>Duration:</b> March 2026 – Ongoing</p>
+    <p><b>Status:</b> Yet to Complete</p>
 </div>
 
+<!-- ISTUDIO -->
 <div id="istudio" class="content">
-  <h2>iStudio</h2>
-  <p>Role: 1)Data Analytics Internship</p>
-  <p>Role: 2)Excel Automation Internship</p>
-  <p>Duration: From APRIL,2026 Ongoing</p>
-  <p>Status: Yet to Complete</p>
+    <h2>iStudio</h2>
+    <p><b>Role:</b> Data Analytics Internship</p>
+    <p><b>Role:</b> Excel Automation Internship</p>
+    <p><b>Duration:</b> April 2026 – Ongoing</p>
+    <p><b>Status:</b> Yet to Complete</p>
 </div>
+
+</section>
 
 <script>
-function show(id) {
-  let sections = document.querySelectorAll('.content');
-  sections.forEach(sec => sec.style.display = 'none');
+function showTab(event, id) {
 
-  document.getElementById(id).style.display = 'block';
+    let contents = document.querySelectorAll('.content');
+    let buttons = document.querySelectorAll('.tabs button');
+
+    contents.forEach(c => c.classList.remove('active'));
+    buttons.forEach(b => b.classList.remove('active'));
+
+    document.getElementById(id).classList.add('active');
+    event.currentTarget.classList.add('active');
 }
 </script>
 
