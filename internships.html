@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Internships</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+
+    .tabs button {
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .content {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>My Internships</h1>
+
+<div class="tabs">
+  <button onclick="show('growai')">GROWAI EdTech</button>
+  <button onclick="show('novitech')">NovitechR&D Ltd</button>
+  <button onclick="show('labmentix')">Labmentix</button>
+  <button onclick="show('istudio')">iStudio</button>
+</div>
+
+<div id="growai" class="content active">
+  <h2>GROWAI EdTech</h2>
+  <p>Role: Data Analyst Intern</p>
+  <p>Duration: From MARCH,2026 Ongoing</p>
+  <p>Status: Yet to Complete</p>
+</div>
+
+<div id="novitech" class="content">
+  <h2>NovitechR&D</h2>
+  <p>Role: Data Analyst Career Accelerator Program and AI & ML for Data Analyst Intern</p>
+  <p>Duration: From APRIL,2026 Ongoing</p>
+  <p>Status: Yet to Complete</p>
+</div>
+
+<div id="labmentix" class="content">
+  <h2>Labmentix</h2>
+  <p>Role: Data Analytics with Ai / Business Analyst</p>
+  <p>Duration: From MARCH,2026 Ongoing</p>
+  <p>Status: Yet to Complete</p>
+</div>
+
+<div id="istudio" class="content">
+  <h2>iStudio</h2>
+  <p>Role: 1)Data Analytics Internship t</p>
+  <p>Role: 2)Excel Automation Internship t</p>
+  <p>Duration: From APRIL,2026 Ongoing</p>
+  <p>Status: Yet to Complete</p>
+</div>
+
+<script>
+function show(id) {
+  let sections = document.querySelectorAll('.content');
+  sections.forEach(sec => sec.style.display = 'none');
+
+  document.getElementById(id).style.display = 'block';
+}
+</script>
+
+</body>
+</html>
