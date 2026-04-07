@@ -196,6 +196,19 @@
             box-shadow: 0 0 10px #22c55e;
         }
 
+        /* SCROLL BUTTON */ 
+        #topBtn { 
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #22c55e;
+            border: none;
+            padding: 12px;
+            border-radius: 50%;
+            display: none;
+            cursor: pointer;
+        }
+        
         /* CONTACT */
         p i {
             margin-right: 8px;
@@ -248,6 +261,7 @@ to generate accurate, structured outputs — skills directly aligned with AI dat
     <div class="card">
         <div class="skills">
             <div class="skill-box"><i class="fa-solid fa-file-excel"></i><p>Excel</p></div>
+            <div class="skill-box" onclick="filterProjects('excel')">Excel</div>
             <div class="skill-box"><i class="fa-brands fa-python"></i><p>Python</p></div>
             <div class="skill-box"><i class="fa-solid fa-database"></i><p>SQL</p></div>
             <div class="skill-box"><i class="fa-solid fa-chart-bar"></i><p>Tableau</p></div>
@@ -266,6 +280,15 @@ to generate accurate, structured outputs — skills directly aligned with AI dat
                 <a href="sales-project.html" class="btn">View Project</a>
             </div>
         </div>
+
+      <!-- UPCOMING PROJECT -->
+        <div class="project-card" data-category="powerbi">
+            <img src="https://via.placeholder.com/300x160?text=Coming+Soon">
+            <div class="project-content">
+                <h4>Upcoming Project</h4>
+                <p>Financial & Customer Analysis (In Progress)</p>
+            </div>
+         </div>  
     </div>
 </section>
 
